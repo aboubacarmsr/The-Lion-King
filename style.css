@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* Location of the image */
+  background: url("images/trailer-1.jpg") no-repeat;
+  /* This is what makes the background image rescale basedon the container's size */
+  background-size: cover;
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  /* Set a background color that will be displayed while the background image is loading */
+  background-color: #000;
+}
+
+/* MOBILE HEADER */
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6em 1.8em;
+  height: 50px;
+}
+
+.menu {
+  width: 30px;
+}
+
+.menu img {
+  width: 100%;
+}
+
+.logo h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.search {
+  display: none;
+}
+
+/* MOBILE BODY */
+
+.main {
+  height: 100vh;
+  width: 100%;
+}
+
+.title {
+  font-family: "Bebas Neue", cursive;
+  padding: 1.3em;
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+
+.watch-now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+}
+
+.watch-now h2 {
+  display: none;
+}
+
+.trailers {
+  display: none;
+}
+
+.rating {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding: 1.5em;
+  font-family: "Poppins", sans-serif;
+}
+
+.stars {
+  width: 100px;
+}
+
+.stars img {
+  width: 100%;
+}
+
+.rating p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.rating h2 {
+  font-size: 1rem;
+}
+
+.scroll {
+  display: none;
+}
+
+/* DESKTOP START */
+
+@media only screen and (min-width: 700px) {
+  header {
+    padding: 2em 2em;
+  }
+
+  .search {
+    display: block;
+  }
+
+  .menu {
+    width: 40px;
+  }
+
+  .logo h1 {
+    font-size: 0.9rem;
+  }
+
+  .search {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    position: absolute;
+    top: 100px;
+    left: 8px;
+    font-size: 3rem;
+    padding: 1.3em 0.7em;
+  }
+
+  .watch-now {
+    top: 250px;
+    right: 40px;
+    transform: translate(0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.5rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .watch-now img {
+    width: 70px;
+  }
+
+  .watch-now h2 {
+    display: block;
+    margin-left: 1em;
+  }
+
+  .rating {
+    bottom: 90px;
+  }
+
+  .trailers {
+    display: block;
+    position: absolute;
+    left: 50px;
+    bottom: 100px;
+  }
+
+  .subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    margin-bottom: 0.9em;
+    letter-spacing: 1px;
+  }
+
+  .all-trailers {
+    display: flex;
+  }
+
+  .trailer {
+    height: 55px;
+    width: 120px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: width 0.4s ease-in-out;
+  }
+
+  .trailer:hover {
+    width: 140px;
+  }
+
+  .trailer-1 {
+    background: url("/images/trailer-1.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .trailer-2 {
+    background: url("/images/trailer-2.jpeg") no-repeat 50%;
+    background-size: cover;
+  }
+
+  .trailer-3 {
+    background: url("/images/trailer-3.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .scroll {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
